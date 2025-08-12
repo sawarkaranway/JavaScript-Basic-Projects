@@ -1,0 +1,74 @@
+/* color.css — minimal black & white, centered column layout */
+
+/* full-height reset */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* center everything vertically + horizontally, stack in one column */
+body {
+  display: flex;
+  flex-direction: column;   /* stack one below another */
+  align-items: center;      /* center horizontally */
+  justify-content: center;  /* center vertically */
+  gap: 16px;                /* space between elements */
+  background: #ffffff;      /* white background */
+  color: #000000;           /* black text */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* heading and hr */
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  text-align: center;
+}
+hr {
+  width: 40%;
+  height: 1px;
+  border: 0;
+  background: #000;
+  opacity: 0.12;
+  margin: 6px 0;
+}
+
+/* button centered and simple B/W style */
+#clr {
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #000;
+  background: #000;   /* black button */
+  color: #fff;        /* white text */
+  cursor: pointer;
+  outline: none;
+}
+
+/* color name */
+#clrname {
+  margin: 6px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* the only <div> in your HTML becomes the color swatch box.
+   If you later add a class like <div class="color-display">, replace
+   `body > div` with `.color-display` in this rule. */
+body > div {
+  width: 220px;
+  height: 120px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  transition: background-color 0.25s ease;
+}
+
+/* small responsive tweak */
+@media (max-width: 380px) {
+  body > div { width: 160px; height: 96px; }
+  hr { width: 60%; }
+  #clr { width: 100%; box-sizing: border-box; }
+}
