@@ -1,0 +1,97 @@
+/* ===== Rock Paper Scissors - Black & White Theme ===== */
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;          /* white background */
+  color: #000;               /* black text */
+  text-align: center;        /* center everything */
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 20px 0 10px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #000;
+  margin: 20px auto;
+  width: 60%;
+}
+
+/* ===== Best of Buttons ===== */
+#b1, #b2, #b3 {
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  padding: 8px 16px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+#b1:hover, #b2:hover, #b3:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ===== Move Buttons (Rock/Paper/Scissors) ===== */
+#r, #p, #s {
+  background: #fff;
+  border: 2px solid #000;
+  margin: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  display: inline-flex;        /* center the image */
+  align-items: center;
+  justify-content: center;
+  width: 120px;                /* fixed square button size */
+  height: 120px;
+}
+
+#r img, #p img, #s img {
+  max-width: 80px;             /* keep images uniform */
+  max-height: 80px;
+  object-fit: contain;
+}
+
+#r:hover, #p:hover, #s:hover {
+  background: #000;
+}
+
+#r:hover img,
+#p:hover img,
+#s:hover img {
+  filter: brightness(0) invert(1); /* invert PNGs to show on black */
+}
+
+/* ===== Display Box ===== */
+#dis {
+  border: 2px solid #000;
+  padding: 15px;
+  margin: 20px auto;
+  min-height: 40px;
+  width: 300px;
+  font-weight: bold;
+}
+
+/* ===== Table Styling ===== */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 10px 15px;
+  text-align: center;
+}
